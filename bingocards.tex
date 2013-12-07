@@ -1,7 +1,12 @@
-\documentclass{article}
+\documentclass[a4]{article}
 \usepackage{xstring}
+\usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{calc}
+\usepackage{helvet}
+\usepackage{geometry}
+\geometry{verbose,tmargin=30pt,bmargin=90pt,lmargin=90pt,
+rmargin=90pt}
 
 %    Column B contains numbers 1 - 15
 %    Column I contains numbers 16 - 30
@@ -12,30 +17,63 @@
 \def\NumOfColumns{5}%
 \def\Sequence{1/A/1/15, 2/B/16/30, 3/C/31/45, 4/D/46/60, 5/E/61/71}%
 
-\newcommand{\Size}{2.5cm}
+\renewcommand*{\familydefault}{\sfdefault}
+
+
+\newcommand{\Size}{2.75cm}
 \tikzset{Square/.style={
     inner sep=0pt,
     text width=\Size, 
     minimum size=\Size,
     draw=black,
-    fill=yellow!20,
+    fill=white,
     align=center,
     }
 }
 
+
 \begin{document}
+\pagenumbering{gobble}
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5cm]{./mhdlogo.jpg}
+\end{figure}
+
+
+\section*{Bingo Instructions and Rules}
+\begin{itemize}
+\item Can't mark off a square until hack has been presented.
+\item Only one square per hack, even if it qualifies for multiple squares.
+\item Win by crossing off 5 in a row (diagonals accepted).
+\item Keep playing until the prizes run out.
+\end{itemize}
+
+\vspace{1cm}
+
+\begin{center}
 \begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]
     \foreach \row/\rowLetter/\MinNumber/\MaxNumber in \Sequence{%
         \foreach \col/\colLetter/\MinNumber/\MaxNumber in \Sequence {%
             \pgfmathtruncatemacro{\value}{\col+\NumOfColumns*(\row-1)}
-            \def\NodeText{\pgfmathparse{random(\MinNumber,\MaxNumber)}\pgfmathresult}
+            \def\NodeText{ \pgfmathparse{random(\MinNumber,\MaxNumber)}\pgfmathresult}
             \pgfmathsetmacro{\ColRowProduce}{\col*\row}
             \IfEq{\ColRowProduce}{9}{% If is center square
-                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\Huge Free Space};
+                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) { Free Space};
             }{
                 \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\Huge \NodeText};
             }
         }
     }
 \end{tikzpicture}
+\end{center}
+
+\vspace{1cm}
+\noindent
+Thanks to @plamere, @alsothings, @sydlawrence, @xhochy, @karltryggvason for their financial support towards prizes and printing!
+
+\noindent
+See https://www.hackerleague.org/hackathons/music-hack-day-london-2013/hacks/mhd-bingo for more info.
 \end{document}
