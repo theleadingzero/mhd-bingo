@@ -17,21 +17,3 @@
 \end{itemize}
 
 \vspace{0.5cm}
-
-
-\begin{center}
-\begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]
-    \foreach \row/\rowLetter/\MinNumber/\MaxNumber in \Sequence{%
-        \foreach \col/\colLetter/\MinNumber/\MaxNumber in \Sequence {%
-            \pgfmathtruncatemacro{\value}{\col+\NumOfColumns*(\row-1)}
-            \def\NodeText{ \pgfmathparse{random(\MinNumber,\MaxNumber)}\pgfmathresult}
-            \pgfmathsetmacro{\ColRowProduce}{\col*\row}
-            \IfEq{\ColRowProduce}{9}{% If is center square
-                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) { Free Space};
-            }{
-                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\Huge \NodeText};
-            }
-        }
-    }
-\end{tikzpicture}
-\end{center}

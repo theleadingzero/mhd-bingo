@@ -15,7 +15,7 @@ rmargin=90pt}
 %    Column O contains numbers 61 - 75
 
 \def\NumOfColumns{5}%
-\def\Sequence{1/A/1/15, 2/B/16/30, 3/C/31/45, 4/D/46/60, 5/E/61/71}%
+\def\Sequence{1, 2, 3, 4, 5}%
 
 \renewcommand*{\familydefault}{\sfdefault}
 
@@ -55,14 +55,14 @@ rmargin=90pt}
 
 \begin{center}
 \begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]
-    \foreach \row/\rowLetter/\MinNumber/\MaxNumber in \Sequence{%
-        \foreach \col/\colLetter/\MinNumber/\MaxNumber in \Sequence {%
-            \pgfmathtruncatemacro{\value}{\col+\NumOfColumns*(\row-1)}
-            \def\NodeText{ \pgfmathparse{random(\MinNumber,\MaxNumber)}\pgfmathresult}
+    \foreach \row in \Sequence{%
+        \foreach \col in \Sequence {%
+            \def\NodeText{ \row }
             \pgfmathsetmacro{\ColRowProduce}{\col*\row}
             \IfEq{\ColRowProduce}{9}{% If is center square
                 \node [Square] at ($(\col,-\row)-(0.5,0.5)$) { Free Space};
-            }{
+            }
+            {
                 \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\Huge \NodeText};
             }
         }
@@ -72,7 +72,7 @@ rmargin=90pt}
 
 \vspace{1cm}
 \noindent
-Thanks to @plamere, @alsothings, @sydlawrence, @xhochy, @karltryggvason for their financial support towards prizes and printing!
+Thanks to @plamere, @alsothings, @sydlawrence, @xhochy, @karltryggvason, @miguelpellitero for their financial support towards prizes and printing!
 
 \noindent
 See https://www.hackerleague.org/hackathons/music-hack-day-london-2013/hacks/mhd-bingo for more info.
