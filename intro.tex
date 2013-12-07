@@ -1,0 +1,37 @@
+\pagenumbering{gobble}
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5cm]{./mhdlogo.jpg}
+\end{figure}
+
+
+\section*{Bingo Instructions and Rules}
+\begin{itemize}
+\item Can't mark off a square until hack has been presented.
+\item Only one square per hack, even if it qualifies for multiple squares.
+\item Win by crossing off 5 in a row (diagonals accepted).
+\item Keep playing until the prizes run out.
+\end{itemize}
+
+\vspace{0.5cm}
+
+
+\begin{center}
+\begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]
+    \foreach \row/\rowLetter/\MinNumber/\MaxNumber in \Sequence{%
+        \foreach \col/\colLetter/\MinNumber/\MaxNumber in \Sequence {%
+            \pgfmathtruncatemacro{\value}{\col+\NumOfColumns*(\row-1)}
+            \def\NodeText{ \pgfmathparse{random(\MinNumber,\MaxNumber)}\pgfmathresult}
+            \pgfmathsetmacro{\ColRowProduce}{\col*\row}
+            \IfEq{\ColRowProduce}{9}{% If is center square
+                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) { Free Space};
+            }{
+                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\Huge \NodeText};
+            }
+        }
+    }
+\end{tikzpicture}
+\end{center}
