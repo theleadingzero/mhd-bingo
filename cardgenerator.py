@@ -24,12 +24,7 @@ for line in squares_file:
 
 squares_file.close()
 
-card = []
-for i in range( number_cards):
-	# Pull out 24 random squares
-	card = random.sample( squares, 25 )
-
-
+# positions of squares in grid
 positions = [ 0.5, 1.5, 2.5, 3.5, 4.5 ]
  
 # Create output file
@@ -50,18 +45,15 @@ for i in range( number_cards ):
 	# bingo card
 	output_tex.write( "\\begin{center}\n" )
 	output_tex.write( "\\begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]\n" )
-	print len(card)
+
+	card = random.sample( squares, 25 )
 	for px in positions:
 		for py in positions:
 			sq = card.pop()
 			node_text = "\\node [Square] at (%s, %s) { %s };\n" % (px, py, sq)
 			output_tex.write( node_text )
-	# output_tex.write( "\\foreach \\row in \Sequence{%\n\\foreach \col in \Sequence {%\n" )
-	# output_tex.write( "\def\NodeText{ \\row }\n\pgfmathsetmacro{\ColRowProduce}{\col*\\row}\n" )
-	# output_tex.write( "\IfEq{\ColRowProduce}{9}{\n\\node [Square] at ($(\col,-\\row)-(0.5,0.5)$) { Free Space};\n}\n" )
-	# output_tex.write( "{\n\\node [Square] at ($(\col,-\\row)-(0.5,0.5)$) {\Huge \NodeText};\n}\n}\n}\n" )
 
-
+	output_tex.write( "\\node [Square] at (2.5, 2.5) { Free Space };\n" )
 	output_tex.write( "\end{tikzpicture}\n\end{center}\n")
 	# thanks
 	output_tex.write(" \\vspace{0.5cm}\n\\noindent\nThanks to @plamere, @alsothings, @sydlawrence, @xhochy, @karltryggvason, @miguelpellitero for their financial support towards prizes and printing! " )
