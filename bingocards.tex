@@ -20,15 +20,16 @@ rmargin=90pt}
 \renewcommand*{\familydefault}{\sfdefault}
 
 
-\newcommand{\Size}{2.75cm}
+\newcommand{\Size}{3cm}
 \tikzset{Square/.style={
     inner sep=0pt,
-    text width=\Size, 
+    text width=\Size*0.8, 
     minimum size=\Size,
     draw=black,
     fill=white,
     align=center,
     }
+    %node/.style={inner sep=0,outer sep=1}
 }
 
 
@@ -45,13 +46,15 @@ rmargin=90pt}
 
 \section*{Bingo Instructions and Rules}
 \begin{itemize}
+\setlength{\itemsep}{0pt}%
 \item Can't mark off a square until hack has been presented.
 \item Only one square per hack, even if it qualifies for multiple squares.
 \item Win by crossing off 5 in a row (diagonals accepted).
+\item Declare bingo by tweeting or messaging in IRC \#mhdbingo.
 \item Keep playing until the prizes run out.
 \end{itemize}
 
-\vspace{1cm}
+\vspace{0.25cm}
 
 \begin{center}
 \begin{tikzpicture}[draw=black, ultra thick, x=\Size,y=\Size]
@@ -63,16 +66,17 @@ rmargin=90pt}
                 \node [Square] at ($(\col,-\row)-(0.5,0.5)$) { Free Space};
             }
             {
-                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) {\Huge \NodeText};
+                \node [Square] at ($(\col,-\row)-(0.5,0.5)$) { \Huge \NodeText};
             }
         }
     }
 \end{tikzpicture}
 \end{center}
 
-\vspace{1cm}
+\vspace{0.25cm}
 \noindent
 Thanks to @plamere, @alsothings, @sydlawrence, @xhochy, @karltryggvason, @miguelpellitero for their financial support towards prizes and printing!
+\vspace{0.25cm}
 
 \noindent
 See https://www.hackerleague.org/hackathons/music-hack-day-london-2013/hacks/mhd-bingo for more info.
