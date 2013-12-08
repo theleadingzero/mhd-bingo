@@ -4,22 +4,73 @@ Rick rolling
 Gangham Style
 Bootstrap default theme website
 SMS collaborative playlist
-Non-white dude presenting hack
+Non-white-dude presenting hack
 Party playlister
 Christmas theme
 Matlab plot
-sample 1
-sample 2
-sample 3
-sample 4
-sample 5
-sample 6
-sample 7
-sample 8
-sample 9
-sample 10
-sample 11
-sample 12
-sample 13
-sample 14
-sample 15
+Lolcat
+Unnecessary number of APIs (5+)
+Blame hack fail on API
+Blame projector fail on Linux
+Miley Cyrus reference
+Microphone feedback
+Audio clipping through sound system
+Powerpoint presentation
+Unfortunately no one used our API
+Everyone calls a Twilio number
+Demo due to error in code
+Nostalgia for 80s or 90s
+8 bit reference
+Laptop audio won't play through speaker
+Unreadable text
+Artists on a map
+Tracks on a map
+Adds feature to own product
+Product pitch
+We're Hiring!
+Unnecessary Arduino
+Using laserpointer with slides
+Face recognition
+Private info accidentally shown
+Questionable theremin
+Clearly hasn't slept
+Clearly too much caffeine
+Friday or Saturday by Rebecca Black
+What Does the Fox Say
+Automatic music remixer
+Group hack where presenter doesn't mention others
+Unnecessary Twitter integration
+Boasting about Node.js
+Sentiment/mood analysis
+Smugness about functional programming language
+Piecharts
+Hack based on name alone
+Academic research project
+Screen resolution demo fail
+Only works in Chrome Unstable
+Use of CouchDB/ MongoDB
+Successful multiplayer demo
+Clearly not done in weekend
+Finished and in app store within weekend
+Used Excel
+Created infographic
+Cowbell
+Uses GPS
+Augmented reality
+Grid of blinking lights
+Wearable tech
+Drinking while presenting
+Accidentally built a framework
+Use of undocumented APIs
+Bitcoin
+XML
+Affiliate links
+Dev mentions they're hirable
+Comic Sans
+xkcd reference
+Gamification
+Non-hardware, non-browser
+You should follow me on Twitter
+404
+Spontaneous applause in middle of presentation
+Girl with headphones

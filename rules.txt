@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+To win mark off 5 squares in a row (up, down, diagonal)
+
+
+
+
+Only 1 square per hack
+
+
+
+
+Can't cross off a square until hack has been presented
+
+
+
+
+DO NOT INTERRUPT THE HACK PRESENTATION
+
+
+
+
+Declare bingo with #mhdbingo on Twitter or IRC
+
+
+
+
+24 prizes, first winner gets to choose from table and so on
+
+
+
+
+1 card per hacker
+
+
+
+
+Only hackers can play (there are 120 cards)
+
+
+
+
+Each card is unique, just take one and don't go through them all
+
+
+
+
+Code on github (Python generating LaTeX)
+
+
+
+
+
+
+
+
+
