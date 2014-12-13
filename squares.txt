@@ -85,3 +85,4 @@ Demo includes live performance of an instrument
 Karaoke
 Presenter mentions Fourier analysis
 "It's like [X] for [Y]"
+WiFi fail ruins demo
