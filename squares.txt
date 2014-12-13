@@ -78,3 +78,10 @@ Old inside joke; only funny to old hackers
 Taylor Swift
 Unnecessary Single Page Web Application
 Bangarang
+Used at least two programming languages
+Only hack to use a sponsor's API
+Too many cooks (5+ hackers on one project)
+Demo includes live performance of an instrument
+Karaoke
+Presenter mentions Fourier analysis
+"It's like [X] for [Y]"
