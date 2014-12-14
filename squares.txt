@@ -18,7 +18,7 @@ Audio clipping through sound system
 Powerpoint presentation
 Unfortunately no one used our API
 Everyone calls a Twilio number
-Demo due to error in code
+Demo fail with visible stack trace
 Nostalgia for 80s or 90s
 8 bit reference
 Laptop audio won't play through speaker
@@ -86,3 +86,8 @@ Karaoke
 Presenter mentions Fourier analysis
 "It's like [X] for [Y]"
 WiFi fail ruins demo
+Projected video of hardware
+Runs over demo time
+Already on Hacker News
+Pandering to bingo
+Beacons
